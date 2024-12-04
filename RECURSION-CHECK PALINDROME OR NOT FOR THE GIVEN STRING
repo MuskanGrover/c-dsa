@@ -1,0 +1,26 @@
+/RECURSION-CHECK WHETHER PALINDROME OR NOT
+bool checkpalindrome(int i,char str[5],int n)
+{
+	if(i>=n/2)
+		return true;
+	if(str[i]!=str[n-i-1])
+		return false;
+	return checkpalindrome(i+1, str,5);
+		
+}
+int main()
+{
+	char str[]="MADAM";
+	int n = sizeof(str) / sizeof(str[0]) - 1;
+	bool res=checkpalindrome(0,str,n);
+	if(res)
+	{
+		cout<<"TRUE"<<endl;
+	}
+	else
+	{
+		cout<<"FALSE"<<endl;
+	}
+
+
+}
