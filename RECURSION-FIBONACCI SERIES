@@ -1,0 +1,20 @@
+//FIBONACCII SERIES USING MULTIPLE RECURSION CALLS
+int fibbonacci(int n)
+{
+	if(n<=1)
+	{
+		return n;
+	}
+
+
+		int last=fibbonacci(n-1);
+		int slast=fibbonacci(n-2);
+		return last+slast;
+		
+
+}
+int main()
+{
+	int res=fibbonacci(4);
+	cout<<res;
+}
